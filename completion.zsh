@@ -1,6 +1,6 @@
 ##############################################################################
 #
-# @file zshrc
+# @file completion.zsh
 # @date May, 2015
 # @author G. Roggemans <g.roggemans@grog.be>
 # @copyright Copyright (c) GROG [https://grog.be] 2015, All Rights Reserved
@@ -20,28 +20,29 @@
 #
 ##############################################################################
 
-source ~/.zsh/checks.zsh
-source ~/.zsh/setopt.zsh
-source ~/.zsh/exports.zsh
-source ~/.zsh/prompt.zsh
-source ~/.zsh/completion.zsh
-source ~/.zsh/aliases.zsh
-
+autoload -Uz compinit
+compinit
 
 ##############################################################################
-# Local config
+#
 
-if [[ -f ~/.zshrc.local ]]; then
-    source ~/.zshrc.local
-fi
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2
+eval "$(dircolors -b)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
 
-
-##############################################################################
-# Secret config
-
-if [[ -f ~/.secret/zsh/zshrc ]]; then
-    source ~/.secret/zsh/zshrc
-fi
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 
 ##############################################################################
