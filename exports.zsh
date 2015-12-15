@@ -19,6 +19,21 @@
 #   along with this script. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+# General exports
 
+# @TODO: Add exports (editor,...)
+
+##############################################################################
+# Dotfiles related exports
+
+# Add dotfiles bin folder to path
+if [[ -d "~/.dotfiles/bin" ]]; then
+    export PATH=$PATH:~/.dotfiles/bin
+fi
+
+# Source dotfiles version export
+if [[ -f "~/.dotfiles/version" ]]; then
+    source "~/.dotfiles/version"
+fi
 
 ##############################################################################
