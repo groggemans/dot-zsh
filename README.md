@@ -18,3 +18,12 @@ These configuration files are inspired by the work of
     git clone https://github.com/groggemans/dot-zsh.git ~/.zsh
     ln -s ~/.zsh/zshrc ~/.zshrc
 ```
+
+
+## License
+MIT
+
+
+## Author
+By [G.Roggemans](https://github.com/groggemans)
+
