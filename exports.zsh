@@ -27,13 +27,13 @@
 # Dotfiles related exports
 
 # Add dotfiles bin folder to path
-if [[ -d "~/.dotfiles/bin" ]]; then
+if [[ -d "$HOME/.dotfiles/bin" ]]; then
     export PATH=$PATH:~/.dotfiles/bin
 fi
 
 # Source dotfiles version export
-if [[ -f "~/.dotfiles/version" ]]; then
-    source "~/.dotfiles/version"
+if [[ -f "$HOME/.dotfiles/version" ]]; then
+    export DOTFILES=$(cat "$HOME/.dotfiles/version")
 fi
 
 ##############################################################################
