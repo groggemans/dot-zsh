@@ -10,6 +10,13 @@
 # @TODO: Add exports (editor,...)
 
 ##############################################################################
+# Ellipsis
+
+if [[ -d "$HOME/.ellipsis/bin" ]]; then
+    export PATH=$PATH:~/.ellipsis/bin
+fi
+
+##############################################################################
 # Dotfiles related exports
 
 # Add dotfiles bin folder to path
