@@ -53,7 +53,6 @@ HISTFILE=~/.zsh/zsh_history # History file
 setopt correct              # Enable command corrections
 setopt correct_all          # Try to correct all arguments
 setopt interactive_comments # Allow commands in interactive mode
-setopt print_exit_value     # Print exit value if not 0
 
 ##############################################################################
 # Job control
