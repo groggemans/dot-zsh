@@ -20,7 +20,7 @@ setopt pushd_ignore_dups    # Do not keep duplicates on the dir stack
 
 setopt always_to_end        # Jump to end of word after completion
 setopt auto_name_dirs       # Auto transform absolute paths to named ones
-setopt complete_in_aliases  # Handle aliases as distinct commands
+setopt complete_aliases     # Handle aliases as distinct commands
 setopt complete_in_word     # Don't put cursor at the back while completing
 setopt no_menu_complete     # Do not cycle trough options with tab
 
