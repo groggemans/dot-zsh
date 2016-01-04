@@ -6,18 +6,22 @@
 # @license MIT
 ##############################################################################
 
-# ls aliases
-#
-    # Linux versions (--color for colored output)
-    if [[ $IS_LINUX -eq 1 ]]; then
-        alias ls='ls -GFh --color'
-        alias la='ls -al --color'
-    fi
+# cd magic
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
-    # Mac versions
-    if [[ $IS_MAC -eq 1 ]]; then
-        alias ls='ls -GFh'
-        alias la='ls -al'
-    fi
+##############################################################################
+# ls aliases
+
+# Add color option for Linux
+if [[ $IS_LINUX -eq 1 ]]; then
+    alias ls='ls -GFh --color'
+else
+    alias ls='ls -GFh'
+fi
+
+alias lh='ls -d .*'
+alias ll='ls -l'
+alias la='ll -a'
 
 ##############################################################################
