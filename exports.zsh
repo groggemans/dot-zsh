@@ -5,9 +5,10 @@
 # @copyright Copyright (c) GROG [https://grog.be] 2015, All Rights Reserved
 # @license MIT
 ##############################################################################
-# General exports
 
-# @TODO: Add exports (editor,...)
+export PAGER='less'         # Pager
+export EDITOR='vim'         # Editor
+export VISUAL='vim'         # Visual editor
 
 ##############################################################################
 # Ellipsis
@@ -22,11 +23,6 @@ fi
 # Add dotfiles bin folder to path
 if [[ -d "$HOME/.dotfiles/bin" ]]; then
     export PATH=$PATH:~/.dotfiles/bin
-fi
-
-# Source dotfiles version export
-if [[ -f "$HOME/.dotfiles/version" ]]; then
-    export DOTFILES=$(cat "$HOME/.dotfiles/version")
 fi
 
 ##############################################################################
