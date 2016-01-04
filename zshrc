@@ -15,7 +15,6 @@ source ~/.zsh/prompt.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/aliases.zsh
 
-
 ##############################################################################
 # Local config
 
@@ -23,13 +22,11 @@ if [[ -f ~/.zshrc.local ]]; then
     source ~/.zshrc.local
 fi
 
-
 ##############################################################################
 # Secret config
 
 if [[ -f ~/.secret/zsh/zshrc ]]; then
     source ~/.secret/zsh/zshrc
 fi
-
 
 ##############################################################################
