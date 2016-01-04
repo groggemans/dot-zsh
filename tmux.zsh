@@ -7,13 +7,16 @@
 ##############################################################################
 
 # Check if Tmux is available
-if which tmux >/dev/null 2>&1; then
+if command -v tmux >/dev/null 2>&1; then
     # If not running interactively, do nothing
     if [[ $- != *i* ]]; then
         return;
-    # Do not run tmux if already in tmux session
+    # Run tmux if not already running
     elif [[ -z "$TMUX" ]]; then
-        exec tmux -2    # Use 256 colors by default (should be fixed)
+        # Use 256 colors by default
+        exec tmux -2
+        # Do not perform useless loading
+        exit $?
     fi
 fi
 
