@@ -1,5 +1,5 @@
 # dot-zsh
-My zsh configuration (**under construction**)
+My zsh configuration
 
 Feel free to use it as a starting point for your own zsh configuration!
 
