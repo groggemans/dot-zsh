@@ -9,6 +9,10 @@
 # Nuke
 alias nuke='rm -rf'
 
+# less with color
+alias less='less -R'
+
+##############################################################################
 # cd magic
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -26,5 +30,9 @@ fi
 alias lh='ls -d .*'
 alias ll='ls -l'
 alias la='ll -a'
+alias lsl='ls|less'
+alias lhl='lh|less'
+alias lll='ll|less'
+alias lal='la|less'
 
 ##############################################################################
