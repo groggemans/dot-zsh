@@ -19,8 +19,8 @@ source ~/.zsh/functions.zsh
 ##############################################################################
 # Local config
 
-if [[ -f ~/.zshrc.local ]]; then
-    source ~/.zshrc.local
+if [[ -f ~/.local/zsh/zshrc ]]; then
+    source ~/.local/zsh/zshrc
 fi
 
 ##############################################################################
