@@ -6,7 +6,11 @@
 # @license MIT
 ##############################################################################
 
-# Nuke
+# clear
+alias clr='clear'
+
+# rm and nuke
+alias rm='rm -i'
 alias nuke='rm -rf'
 
 # less with color
