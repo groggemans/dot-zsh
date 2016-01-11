@@ -6,23 +6,26 @@
 # @license MIT
 ##############################################################################
 
-if [[ $(uname) = 'Linux' ]]; then
+if [[ "$(uname)" == "Linux" ]]; then
     IS_LINUX=1
 fi
 
-if [[ $(uname) = 'Darwin' ]]; then
+if [[ "$(uname)" == "Darwin" ]]; then
     IS_MAC=1
 fi
 
-if [[ -x `which brew` ]]; then
+command -v brew >/dev/null 2>&1
+if [[ "$?" -eq 0 ]]; then
     HAS_BREW=1
 fi
 
-if [[ -x `which apt-get` ]]; then
+command -v apt-get >/dev/null 2>&1
+if [[ "$?" -eq 0 ]]; then
     HAS_APT=1
 fi
 
-if [[ -x `which yum` ]]; then
+command -v yum >/dev/null 2>&1
+if [[ "$?" -eq 0 ]]; then
     HAS_YUM=1
 fi
 
