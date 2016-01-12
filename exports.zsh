@@ -11,6 +11,13 @@ export EDITOR='vim'         # Editor
 export VISUAL='vim'         # Visual editor
 
 ##############################################################################
+# Locale
+
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
+
+##############################################################################
 # Ellipsis
 
 if [[ -d "$HOME/.ellipsis/bin" ]]; then
