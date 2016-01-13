@@ -6,17 +6,6 @@
 # @license MIT
 ##############################################################################
 
-# This function is used to start Tmux with the possibility to abort.
-start_tmux() {
-    echo "Press any key to start tmux..."
-    read -s -n 1
-
-    # Use 256 colors by default
-    exec tmux -2
-    # Do not perform useless loading
-    exit $?
-}
-
 # Check if Tmux is available
 if command -v tmux >/dev/null 2>&1; then
     # If not running interactively, do nothing
@@ -24,7 +13,17 @@ if command -v tmux >/dev/null 2>&1; then
         return;
     # Run Tmux if not already running
     elif [[ -z "$TMUX" ]]; then
-        start_tmux
+        echo "Press enter to start tmux..."
+        read choice
+
+        if [[ "$choice" =~ [Nn]o? ]]; then
+            return
+        else
+            # Use 256 colors by default
+            exec tmux -2
+            # Do not perform useless loading
+            exit $?
+        fi
     fi
 fi
 
