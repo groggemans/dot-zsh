@@ -21,7 +21,7 @@ export LANGUAGE="en_US.UTF-8"
 # Users bin
 
 if [[ -d "$HOME/bin" ]]; then
-    export PATH=$PATH:~/bin
+    export PATH=~/bin:$PATH
 fi
 
 ##############################################################################
