@@ -18,6 +18,13 @@ export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 
 ##############################################################################
+# Users bin
+
+if [[ -d "$HOME/bin" ]]; then
+    export PATH=$PATH:~/bin
+fi
+
+##############################################################################
 # Ellipsis
 
 if [[ -d "$HOME/.ellipsis/bin" ]]; then
