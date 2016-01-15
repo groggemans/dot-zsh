@@ -6,6 +6,25 @@
 # @license MIT
 ##############################################################################
 
+# PATH helper, if exists, prepend, no duplication
+prepend_path() {
+    if [[ -d $1 ]] && [[ ! $PATH =~ "(^|:)$1(:|$)" ]]; then
+        export PATH=$1:$PATH
+    fi
+}
+
+##############################################################################
+
+# PATH helper, if exists, append, no duplication
+append_path() {
+    if [[ -d $1 ]] && [[ ! $PATH =~ "(^|:)$1(:|$)" ]]; then
+        export PATH=$PATH:$1
+    fi
+}
+
+##############################################################################
+# General
+
 export PAGER='less'         # Pager
 export EDITOR='vim'         # Editor
 export VISUAL='vim'         # Visual editor
@@ -18,25 +37,10 @@ export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 
 ##############################################################################
-# Users bin
+# PATH
 
-if [[ -d "$HOME/bin" ]]; then
-    export PATH=~/bin:$PATH
-fi
-
-##############################################################################
-# Ellipsis
-
-if [[ -d "$HOME/.ellipsis/bin" ]]; then
-    export PATH=$PATH:~/.ellipsis/bin
-fi
-
-##############################################################################
-# Dotfiles related exports
-
-# Add dotfiles bin folder to path
-if [[ -d "$HOME/.dotfiles/bin" ]]; then
-    export PATH=$PATH:~/.dotfiles/bin
-fi
+prepend_path "$HOME/bin"                # Users bin folder
+append_path "$HOME/.ellipsis/bin"       # Ellipsis bin folder
+append_path "$HOME/.dotfiles/bin"       # Dotfiles bin folder
 
 ##############################################################################
