@@ -44,16 +44,25 @@ alias lal='la|less'
 ##############################################################################
 # Ansible
 
+# Test if ansible is installed
 command -v ansible >/dev/null 2>&1
 if [[ "$?" -eq 0 ]]; then
     HAS_ANSIBLE=1
 fi
 
+# Faster ansible ussage
 if [[ $HAS_ANSIBLE -eq 1 ]]; then
     alias vault='ansible-vault'
     alias galaxy='ansible-galaxy'
     alias play='ansible-playbook'
     alias playbook='ansible-playbook'
+fi
+
+# Faster source usage
+if [[ -f "$HOME/ansible/hacking/env-setup" ]]; then
+    alias src-ansible="source $HOME/ansible/hacking/env-setup"
+elif [[ -f "$HOME/.ansible/hacking/env-setup" ]]; then
+    alias src-ansible="source $HOME/.ansible/hacking/env-setup"
 fi
 
 ##############################################################################
