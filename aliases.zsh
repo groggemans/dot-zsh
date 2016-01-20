@@ -6,6 +6,9 @@
 # @license MIT
 ##############################################################################
 
+# Let aliases expand when using sudo. (space tells zsh to first expand)
+alias sudo='sudo '
+
 # clear
 alias clr='clear'
 
