@@ -34,10 +34,27 @@ fi
 alias lh='ls -d .*'
 alias ll='ls -l'
 alias la='ll -a'
+
+# should be changed to functions to allow aditional params
 alias lsl='ls|less'
 alias lhl='lh|less'
 alias lll='ll|less'
 alias lal='la|less'
+
+##############################################################################
+# Ansible
+
+command -v ansible >/dev/null 2>&1
+if [[ "$?" -eq 0 ]]; then
+    HAS_ANSIBLE=1
+fi
+
+if [[ $HAS_ANSIBLE -eq 1 ]]; then
+    alias vault='ansible-vault'
+    alias galaxy='ansible-galaxy'
+    alias play='ansible-playbook'
+    alias playbook='ansible-playbook'
+fi
 
 ##############################################################################
 # OSX specific aliases
