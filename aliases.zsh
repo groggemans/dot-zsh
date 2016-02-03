@@ -19,6 +19,9 @@ alias nuke='rm -rf'
 # less with color
 alias less='less -R'
 
+# grep with color
+alias grep='grep --color=auto'
+
 ##############################################################################
 # cd magic
 alias ...='cd ../..'
