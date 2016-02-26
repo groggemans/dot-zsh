@@ -58,7 +58,6 @@ fi
 
 # Faster ansible ussage
 if [[ $HAS_ANSIBLE -eq 1 ]]; then
-    alias vault='ansible-vault'
     alias galaxy='ansible-galaxy'
     alias play='ansible-playbook'
     alias playbook='ansible-playbook'
