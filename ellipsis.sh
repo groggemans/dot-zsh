@@ -12,7 +12,7 @@ pkg.link() {
     fs.link_file zshrc
 
     # Link package into ~/.zsh
-    fs.link_file $PKG_PATH
+    fs.link_file "$PKG_PATH"
 }
 
 ##############################################################################
