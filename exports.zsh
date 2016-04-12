@@ -21,8 +21,8 @@ export LANGUAGE="en_US.UTF-8"
 ##############################################################################
 # PATH
 
-prepend_path "$HOME/bin"                # Users bin folder
-prepend_path "$HOME/.bin"               # Users bin folder
+append_path "$HOME/bin"                 # Users bin folder
+append_path "$HOME/.bin"                # Users bin folder
 append_path "$HOME/.ellipsis/bin"       # Ellipsis bin folder
 append_path "$HOME/.dotfiles/bin"       # Dotfiles bin folder
 
