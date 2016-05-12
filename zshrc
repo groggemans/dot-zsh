@@ -32,6 +32,7 @@ source ~/.config/zsh/setopt.zsh
 
 # Prompt settings
 source ~/.config/zsh/prompt.zsh
+source ~/.config/shell/prompt.sh
 
 # Completion settings
 source ~/.config/zsh/completion.zsh

@@ -10,9 +10,3 @@ autoload -Uz promptinit
 promptinit
 
 ##############################################################################
-# Color settings
-
-#prompt adam1                                # Temp colors
-source ~/.zsh/shell_prompt.sh
-
-##############################################################################
