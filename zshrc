@@ -6,28 +6,35 @@
 # @license MIT
 ##############################################################################
 
-source ~/.zsh/helpers.zsh
-source ~/.zsh/exports.zsh
-source ~/.zsh/tmux.zsh
-source ~/.zsh/checks.zsh
-source ~/.zsh/colors.zsh
+if [ ! -d ~/.config/shell ]; then
+    echo "Could not find common files"
+    exit
+fi
+
+source ~/.config/shell/helpers.sh
+source ~/.config/shell/exports.sh
+source ~/.config/shell/tmux.sh
+source ~/.config/shell/checks.sh
+source ~/.config/shell/colors.sh
+
 source ~/.zsh/setopt.zsh
 source ~/.zsh/prompt.zsh
 source ~/.zsh/completion.zsh
-source ~/.zsh/aliases.zsh
-source ~/.zsh/functions.zsh
+
+source ~/.config/shell/aliases.zsh
+source ~/.config/shell/functions.zsh
 
 ##############################################################################
 # Local config
 
-if [[ -f ~/.local/zsh/zshrc ]]; then
+if [ -f ~/.local/zsh/zshrc ]; then
     source ~/.local/zsh/zshrc
 fi
 
 ##############################################################################
 # Secret config
 
-if [[ -f ~/.secret/zsh/zshrc ]]; then
+if [ -f ~/.secret/zsh/zshrc ]; then
     source ~/.secret/zsh/zshrc
 fi
 
