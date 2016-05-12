@@ -24,7 +24,7 @@ source ~/.config/shell/tmux.sh
 source ~/.config/shell/checks.sh
 
 # Color
-source ~/.config/shell/colors.sh
+source ~/.config/shell/color.sh
 source ~/.zsh/colors.zsh
 
 # Zsh options
@@ -37,10 +37,10 @@ source ~/.zsh/prompt.zsh
 source ~/.zsh/completion.zsh
 
 # Aliases
-source ~/.config/shell/aliases.zsh
+source ~/.config/shell/aliases.sh
 
 # Useful functions
-source ~/.config/shell/functions.zsh
+source ~/.config/shell/functions.sh
 
 ##############################################################################
 # Local config
