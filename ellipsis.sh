@@ -7,13 +7,34 @@
 # @license MIT
 ##############################################################################
 
-pkg.link() {
-    # Link zshrc
-    fs.link_file zshrc
-
-    # Link package into ~/.zsh
-    fs.link_file "$PKG_PATH"
+# Install package
+pkg.install() {
+    : #TODO
 }
 
 ##############################################################################
 
+# Link package
+pkg.link() {
+    # Link files
+    fs.link_file zshrc
+
+    # Link package into ~/.config/zsh
+    fs.link_file "$PKG_PATH" "$HOME/.config/zsh"
+}
+
+##############################################################################
+
+# Unlink package
+pkg.unlink() {
+    : #TODO
+}
+
+##############################################################################
+
+# Uninstall package
+pkg.uninstall() {
+    : #TODO
+}
+
+##############################################################################

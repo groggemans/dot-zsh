@@ -25,16 +25,16 @@ source ~/.config/shell/checks.sh
 
 # Color
 source ~/.config/shell/color.sh
-source ~/.zsh/colors.zsh
+source ~/.config/zsh/color.zsh
 
 # Zsh options
-source ~/.zsh/setopt.zsh
+source ~/.config/zsh/setopt.zsh
 
 # Prompt settings
-source ~/.zsh/prompt.zsh
+source ~/.config/zsh/prompt.zsh
 
 # Completion settings
-source ~/.zsh/completion.zsh
+source ~/.config/zsh/completion.zsh
 
 # Aliases
 source ~/.config/shell/aliases.sh
@@ -43,17 +43,26 @@ source ~/.config/shell/aliases.sh
 source ~/.config/shell/functions.sh
 
 ##############################################################################
-# Local config
-
-if [ -f ~/.local/zsh/zshrc ]; then
-    source ~/.local/zsh/zshrc
-fi
-
-##############################################################################
 # Secret config
 
 if [ -f ~/.secret/zsh/zshrc ]; then
     source ~/.secret/zsh/zshrc
+fi
+
+##############################################################################
+# Other config
+
+if [ -d ~/.config/shell/source ]; then
+    for file in ~/.config/shell/source/*; do
+        source "$file"
+    done
+fi
+
+##############################################################################
+# Local config
+
+if [ -f ~/.local/zsh/zshrc ]; then
+    source ~/.local/zsh/zshrc
 fi
 
 ##############################################################################
