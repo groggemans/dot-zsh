@@ -7,21 +7,39 @@
 ##############################################################################
 
 if [ ! -d ~/.config/shell ]; then
-    echo "Could not find common files"
+    echo "Could not find common shell files"
     exit
 fi
 
+# Helper functions used in the config
 source ~/.config/shell/helpers.sh
-source ~/.config/shell/exports.sh
-source ~/.config/shell/tmux.sh
-source ~/.config/shell/checks.sh
-source ~/.config/shell/colors.sh
 
+# Exports
+source ~/.config/shell/exports.sh
+
+# Tmux stuff
+source ~/.config/shell/tmux.sh
+
+# Various checks
+source ~/.config/shell/checks.sh
+
+# Color
+source ~/.config/shell/colors.sh
+source ~/.zsh/colors.zsh
+
+# Zsh options
 source ~/.zsh/setopt.zsh
+
+# Prompt settings
 source ~/.zsh/prompt.zsh
+
+# Completion settings
 source ~/.zsh/completion.zsh
 
+# Aliases
 source ~/.config/shell/aliases.zsh
+
+# Useful functions
 source ~/.config/shell/functions.zsh
 
 ##############################################################################
