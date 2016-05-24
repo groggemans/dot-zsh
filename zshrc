@@ -54,7 +54,7 @@ fi
 # Other config
 
 if [ -d ~/.config/shell/source ]; then
-    for file in ~/.config/shell/source/*; do
+    for file in ~/.config/shell/source/*(DN.); do
         source "$file"
     done
 fi
