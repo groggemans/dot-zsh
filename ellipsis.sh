@@ -20,14 +20,15 @@ pkg.link() {
     fs.link_file zshrc
 
     # Link package into ~/.config/zsh
-    fs.link_file "$PKG_PATH" "$HOME/.config/zsh"
+    mkdir -p "$ELLIPSIS_HOME/.config"
+    fs.link_file "$PKG_PATH" "$ELLIPSIS_HOME/.config/zsh"
 }
 
 ##############################################################################
 
 # Unlink package
 pkg.unlink() {
-    : #TODO
+    rm "$ELLIPSIS_HOME/.config/zsh"
 }
 
 ##############################################################################
