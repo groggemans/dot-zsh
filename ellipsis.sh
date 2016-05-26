@@ -28,7 +28,11 @@ pkg.link() {
 
 # Unlink package
 pkg.unlink() {
+    # Remove link in the config dir
     rm "$ELLIPSIS_HOME/.config/zsh"
+
+    # Remove all links in the home folder
+    hooks.unlink
 }
 
 ##############################################################################
