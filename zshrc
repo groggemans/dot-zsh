@@ -6,25 +6,27 @@
 # @license MIT
 ##############################################################################
 
-if [ ! -d ~/.config/shell ]; then
+SHELL_LIB="$HOME/.config/shell/lib"
+
+if [ ! -d "$SHELL_LIB" ]; then
     echo "Could not find common shell files"
     exit
 fi
 
 # Helper functions used in the config
-source ~/.config/shell/helpers.sh
+source "$SHELL_LIB/helpers.sh"
 
 # Exports
-source ~/.config/shell/exports.sh
+source "$SHELL_LIB/exports.sh"
 
 # Tmux stuff
-source ~/.config/shell/tmux.sh
+source "$SHELL_LIB/tmux.sh"
 
 # Various checks
-source ~/.config/shell/checks.sh
+source "$SHELL_LIB/checks.sh"
 
 # Color
-source ~/.config/shell/color.sh
+source "$SHELL_LIB/color.sh"
 source ~/.config/zsh/color.zsh
 
 # Zsh options
@@ -32,16 +34,16 @@ source ~/.config/zsh/setopt.zsh
 
 # Prompt settings
 source ~/.config/zsh/prompt.zsh
-source ~/.config/shell/prompt.sh
+source "$SHELL_LIB/prompt.sh"
 
 # Completion settings
 source ~/.config/zsh/completion.zsh
 
 # Aliases
-source ~/.config/shell/aliases.sh
+source "$SHELL_LIB/aliases.sh"
 
 # Useful functions
-source ~/.config/shell/functions.sh
+source "$SHELL_LIB/functions.sh"
 
 ##############################################################################
 # Secret config
