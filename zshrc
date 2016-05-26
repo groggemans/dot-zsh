@@ -54,9 +54,11 @@ fi
 # Other config
 
 if [ -d ~/.config/shell/source ]; then
-    for file in ~/.config/shell/source/*(DN.); do
+    setopt null_glob
+    for file in ~/.config/shell/source/*; do
         source "$file"
     done
+    unsetopt null_glob
 fi
 
 ##############################################################################
