@@ -10,7 +10,7 @@ SHELL_LIB="$HOME/.config/shell/lib"
 
 if [ ! -d "$SHELL_LIB" ]; then
     echo "Could not find common shell files"
-    exit
+    return
 fi
 
 # Helper functions used in the config
