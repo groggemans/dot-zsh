@@ -6,10 +6,6 @@
 # @license MIT
 ##############################################################################
 
-# Vi bindings
-bindkey -v
-
-##############################################################################
 # Changing directories
 
 setopt auto_cd              # Use dir names as cd command aliases if possible
@@ -40,7 +36,7 @@ setopt hist_reduce_blanks   # Remove extra whitespace before storing in hist
 
 HISTSIZE=1000               # History size
 SAVEHIST=1000               # History size to save
-HISTFILE=~/.zsh/zsh_history # History file
+HISTFILE=~/.config/zsh/zsh_history # History file
 
 ##############################################################################
 # Initialization

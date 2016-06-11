@@ -31,6 +31,7 @@ source ~/.config/zsh/color.zsh
 
 # Zsh options
 source ~/.config/zsh/setopt.zsh
+source ~/.config/zsh/keybindings.zsh
 
 # Prompt settings
 source "$SHELL_LIB/prompt.sh"
