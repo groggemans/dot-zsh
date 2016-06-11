@@ -33,8 +33,8 @@ source ~/.config/zsh/color.zsh
 source ~/.config/zsh/setopt.zsh
 
 # Prompt settings
-source ~/.config/zsh/prompt.zsh
 source "$SHELL_LIB/prompt.sh"
+source ~/.config/zsh/prompt.zsh
 
 # Completion settings
 source ~/.config/zsh/completion.zsh
@@ -44,6 +44,7 @@ source "$SHELL_LIB/aliases.sh"
 
 # Useful functions
 source "$SHELL_LIB/functions.sh"
+source ~/.config/zsh/functions.zsh
 
 ##############################################################################
 # Secret config
