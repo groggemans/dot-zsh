@@ -55,17 +55,6 @@ if [ -f ~/.secret/zsh/zshrc ]; then
 fi
 
 ##############################################################################
-# Other config
-
-if [ -d ~/.config/shell/source ]; then
-    setopt null_glob
-    for file in ~/.config/shell/source/*; do
-        source "$file"
-    done
-    unsetopt null_glob
-fi
-
-##############################################################################
 # Local config
 
 if [ -f ~/.local/zsh/zshrc ]; then
