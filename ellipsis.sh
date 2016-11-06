@@ -16,7 +16,8 @@ ELLIPSIS_PKG_DEPS='groggemans/dot-shell'
 
 pkg.install() {
     # groggemans/shell package should be installed (rough check)
-    if ! ellipsis.list_packages | grep "$ELLIPSIS_PACKAGES/shell"; then
+    ellipsis.list_packages | grep "$ELLIPSIS_PACKAGES/shell" 2>&1 > /dev/null
+    if [ $? -ne 0 ]; then
         log.fail "Unmet dependency 'groggemans/dot-shell'"
         return 1
     fi
