@@ -13,6 +13,8 @@ fi
 ##############################################################################
 
 autoload -Uz compinit
+autoload -U +X bashcompinit && bashcompinit
+
 compinit
 
 ##############################################################################
@@ -44,8 +46,23 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 ##############################################################################
 
 if [ -f /usr/local/bin/terraform ]; then
-    autoload -U +X bashcompinit && bashcompinit
     complete -C /usr/local/bin/terraform terraform
+fi
+
+if [ -f /usr/local/bin/consul ]; then
+    complete -C /usr/local/bin/consul consul
+fi
+
+if [ -f /usr/local/bin/vault ]; then
+    complete -C /usr/local/bin/vault vault
+fi
+
+if [ -f /usr/local/bin/nomad ]; then
+    complete -C /usr/local/bin/nomad nomad
+fi
+
+if [ -f /usr/local/bin/packer ]; then
+    complete -C /usr/local/bin/packer packer
 fi
 
 ##############################################################################
