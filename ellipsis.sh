@@ -28,7 +28,7 @@ pkg.install() {
 pkg.link() {
     # Link files
     fs.link_file zshrc
-    fs.ling_file zprofile
+    fs.link_file zprofile
 
     # Link package into ~/.config/zsh
     mkdir -p "$ELLIPSIS_HOME/.config"
