@@ -45,7 +45,6 @@ source "$SHELL_LIB/aliases.sh"
 
 # Useful functions
 source "$SHELL_LIB/functions.sh"
-source ~/.config/zsh/functions.zsh
 
 ##############################################################################
 # Secret config
