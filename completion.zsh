@@ -6,15 +6,10 @@
 # @license MIT
 ##############################################################################
 
-if [ -d "$HOME/.ellipsis" ]; then
-    fpath=($HOME/.ellipsis/comp $fpath)
-fi
-
-##############################################################################
-
 autoload -Uz compinit
-autoload -U +X bashcompinit && bashcompinit
+autoload -U +X bashcompinit
 
+bashcompinit
 compinit
 
 ##############################################################################
@@ -47,22 +42,32 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 if [ -f /usr/local/bin/terraform ]; then
     complete -C /usr/local/bin/terraform terraform
+elif [ -f /usr/bin/terraform ]; then
+    complete -C /usr/bin/terraform terraform
 fi
 
 if [ -f /usr/local/bin/consul ]; then
     complete -C /usr/local/bin/consul consul
+elif [ -f /usr/bin/consul ]; then
+    complete -C /usr/bin/consul consul
 fi
 
 if [ -f /usr/local/bin/vault ]; then
     complete -C /usr/local/bin/vault vault
+elif [ -f /usr/bin/vault ]; then
+    complete -C /usr/bin/vault vault
 fi
 
 if [ -f /usr/local/bin/nomad ]; then
     complete -C /usr/local/bin/nomad nomad
+elif [ -f /usr/bin/nomad ]; then
+    complete -C /usr/bin/nomad nomad
 fi
 
 if [ -f /usr/local/bin/packer ]; then
     complete -C /usr/local/bin/packer packer
+elif [ -f /usr/bin/packer ]; then
+    complete -C /usr/bin/packer packer
 fi
 
 ##############################################################################
